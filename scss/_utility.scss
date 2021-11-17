@@ -1,0 +1,124 @@
+.container {
+  max-width: $website-width;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 1.5rem;
+}
+
+%btn-shared {
+  display: inline-block;
+  padding: 13px 32px;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $main-color;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+  }
+
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $light-color;
+  }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: $main-color;
+}
+
+// Background
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// PADDING
+.py {
+  &-1 {
+    padding: 16px 0;
+  }
+
+  &-2 {
+    padding: 32px 0;
+  }
+
+  &-3 {
+    padding: 48px 0;
+  }
+
+  &-4 {
+    padding: 64px 0;
+  }
+}
+
+// MARGIN
+.my {
+  &-1 {
+    margin: 16px 0;
+  }
+
+  &-2 {
+    margin: 32px 0;
+  }
+
+  &-3 {
+    margin: 48px 0;
+  }
+
+  &-4 {
+    margin: 64px 0;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  // padding-bottom: 9px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.separator {
+  height: 2.5px;
+  width: 50px;
+  display: block;
+  background: $main-color;
+  margin: 18px auto;
+}
